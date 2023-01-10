@@ -1,68 +1,31 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/182b4dca9e.js"
-      crossorigin="anonymous"
-    ></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       href="http://fonts.googleapis.com/css?family=Arvo:400"
       rel="stylesheet"
       type="text/css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Domowy Budżet</title>
+    <title>Przelicznik walut</title>
   </head>
   <body>
-    <div class="containerLogo">
+    <div class="container">
       <div class="logo"></div>
-      <div class="container-header">
-        <span id="ballance-positive" class="titleL">Możesz jeszcze wydać </span>
-        <span id="warning-ballance" class="titleL hidden"
-          >Przekroczyłeś budżet o
-        </span>
-        <p type="number" id="ballance" class="inplus">0</p>
-        <span class="titleR">złotych</span>
-      </div>
-      <button id="reset" style="font-weight: bold">Wyczyść budżet</button>
+      <p1 id="title">Przelicznik walut</p1>
     </div>
     <div class="container">
-      <div class="incomes">
-        <div class="header">
-          <p class="inner" style="font-weight: bold">Przychody:</p>
-          <p class="totalInc">0</p>
-          <input type="text" id="income-title" placeholder="Przychód" />
-          <input type="number" id="income-amt" placeholder="0" min="0" />
-          <i id="addInc" class="fa-regular fa-square-plus"></i>
-          <div id="warning-income" class="hidden">
-            Wartość nie może być pusta bądź ujemna
-          </div>
-        </div>
-
-        <div class="input">
-          <ul class="list" id="incomes"></ul>
-        </div>
-      </div>
-
-      <div class="expenses">
-        <div class="header">
-          <p class="inner" style="font-weight: bold">Wydatki:</p>
-          <p class="totalExp">0</p>
-          <input type="text" id="expense-title" placeholder="Wydatek" />
-          <input type="number" id="expense-amt" placeholder="0" min="0" />
-          <i id="addExp" class="fa-regular fa-square-plus"></i>
-          <div id="warning-expense" class="hidden">
-            Wartość nie może być pusta bądź ujemna
-          </div>
-        </div>
-        <div class="input">
-          <ul class="list" id="expenses"></ul>
-        </div>
-      </div>
+      <input type="number" id="input" min="0" placeholder="Wpisz kwote" />
+      <div id="currencySelect"></div>
+      <button id="getCurrencies">Przelicz</button>
+      <span>to</span>
+      <p id="result"></p>
+      <span id="resultCurrency">PLN</span>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>
